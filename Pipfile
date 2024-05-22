@@ -12,3 +12,9 @@ psycopg2 = "*"
 
 [requires]
 python_version = "3.11"
+
+[scripts]
+server = "python manage.py runserver"
+migrate = "python manage.py migrate"
+makemigrations = "python manage.py makemigrations"
+createsuperuser = "python manage.py createsuperuser --username admin --email admin@dev.bg --noinput"
