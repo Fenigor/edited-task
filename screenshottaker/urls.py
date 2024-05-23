@@ -20,7 +20,7 @@ from crawler.views import health_check, screenshots
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('health/', health_check, name='health_check'),
-    path('start_crawler/', screenshots, name='screenshots'),
+    path('isalive/', health_check, name='health_check'),
+    path('screenshots/', screenshots, name='screenshots'),
 
 ]
