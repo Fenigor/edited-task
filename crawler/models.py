@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class webResources(models.Model):
+class WebResources(models.Model):
     link: models.CharField = models.TextField(
         verbose_name='link', blank=False, null=False,
     )
