@@ -10,7 +10,7 @@ def create_directory():
     return directory
 
 
-def crawl_page(url, depth):
+def crawl_page(url, depth=2):
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
@@ -18,7 +18,7 @@ def crawl_page(url, depth):
     directory = create_directory()
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    pic = f'{directory}/{directory}.png' # not the best name, but it's unique
+    pic = f'{directory}/{directory}.png'  # not the best name, but it's unique
     driver.save_screenshot(pic) 
     elems = driver.find_elements(By.XPATH, "//a[@href]")
     links_and_pics = [(url, pic)]
