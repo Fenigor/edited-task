@@ -9,3 +9,20 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5434:5432"
+
+  app:
+    build: .
+    image: edited_crawler
+    container_name: edited_crawler
+    command: >
+      sh -c "pipenv run migrate &&
+             pipenv run server 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+      - .env-compose
+    volumes:
+      - .:/code
+    depends_on:
+      - postgres
