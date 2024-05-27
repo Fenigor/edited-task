@@ -1,6 +1,28 @@
 # edited-task
 [home task for edited](https://docs.google.com/document/d/177-MTuV6p0TL_Pyq98JAXzr2et_iuBGRBzbkQ0KnVHc/edit#heading=h.9dfe7slnyrce)
 
+ # steps to locally run
+ setup pipenv with:
+
+ `pip install pipenv`
+
+ install packages with:
+
+ `pipenv sync`
+
+ start your own database(modify the configuration if needed)
+
+ start the server with:
+
+ `pipenv run server`
+
+# setup docker
+execute:
+
+`docker-compose up -d`
+
+# Explanation
+
 the current workflow is:
 * send a request with URL and depth
 * start up a browser 
